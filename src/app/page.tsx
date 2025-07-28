@@ -20,10 +20,10 @@ export default function Page() {
   
   return (
     <main className={cn(
-      "container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16",
+      "container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 bg-background text-foreground min-h-screen",
       isArabic && "font-arabic"
     )}>
-      <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-4">
+      <section className="mx-auto w-full max-w-4xl lg:max-w-5xl space-y-8 print:space-y-4">
         {/* Mobile-optimized header layout */}
         <div className={cn(
           "flex flex-col items-center space-y-6 md:flex-row md:items-center md:justify-between md:space-y-0",
@@ -34,73 +34,73 @@ export default function Page() {
             "flex-1 space-y-1.5 text-center md:text-left",
             isArabic ? "md:ml-6 md:text-right" : "md:mr-6"
           )}>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-blue-600 bg-clip-text text-transparent animate-shimmer">
+            <h1 className="text-4xl md:text-5xl font-bold text-accent">
               {messages.name}
             </h1>
-            <p className="max-w-md text-pretty font-medium text-lg text-slate-700 print:text-[12px] mx-auto md:mx-0">
+            <p className="max-w-md text-pretty font-medium text-xl md:text-2xl text-foreground print:text-[12px] mx-auto md:mx-0">
               {messages.about}
             </p>
             <p className={cn(
-              "max-w-md items-center text-pretty font-mono text-sm text-muted-foreground flex justify-center md:justify-start",
+              "max-w-md items-center text-pretty font-mono text-base md:text-lg text-muted-foreground flex justify-center md:justify-start",
               isArabic && "md:justify-end"
             )}>
               <a
-                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline hover:text-blue-600 transition-colors duration-300"
+                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline hover:text-accent transition-colors duration-300"
                 href={RESUME_DATA.locationLink}
                 target="_blank"
               >
-                <GlobeIcon className="size-4 text-blue-600" />
+                <GlobeIcon className="size-4 text-accent" />
                 {messages.location}
               </a>
             </p>
             {/* Compact Personal Info & Languages */}
             <div className={cn(
-              "flex flex-wrap gap-2 pt-3 text-xs justify-center md:justify-start",
+              "flex flex-wrap gap-2 pt-3 text-sm md:text-base justify-center md:justify-start",
               isArabic && "md:justify-end"
             )}>
               {/* Personal Info */}
-              <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-50 rounded-md border border-slate-200">
-                <CalendarIcon className="size-3 text-slate-600" />
-                <span className="text-slate-700 font-medium">{messages.personalInfo.values.dateOfBirth}</span>
+              <div className="flex items-center gap-1.5 px-2 py-1 bg-card rounded-md border border-border">
+                <CalendarIcon className="size-3 text-muted-foreground" />
+                <span className="text-card-foreground font-medium">{messages.personalInfo.values.dateOfBirth}</span>
               </div>
-              <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-50 rounded-md border border-slate-200">
-                <HomeIcon className="size-3 text-slate-600" />
+              <div className="flex items-center gap-1.5 px-2 py-1 bg-card rounded-md border border-border">
+                <HomeIcon className="size-3 text-muted-foreground" />
                 <a 
                   href={RESUME_DATA.personalInfo.placeOfBirthLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-700 font-medium hover:text-blue-600 hover:underline transition-colors duration-300"
+                  className="text-card-foreground font-medium hover:text-accent hover:underline transition-colors duration-300"
                 >
                   {messages.personalInfo.values.placeOfBirth}
                 </a>
               </div>
-              <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-50 rounded-md border border-slate-200">
-                <FlagIcon className="size-3 text-slate-600" />
-                <span className="text-slate-700 font-medium">{messages.personalInfo.values.nationality}</span>
+              <div className="flex items-center gap-1.5 px-2 py-1 bg-card rounded-md border border-border">
+                <FlagIcon className="size-3 text-muted-foreground" />
+                <span className="text-card-foreground font-medium">{messages.personalInfo.values.nationality}</span>
               </div>
-              <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-50 rounded-md border border-slate-200">
-                <HeartIcon className="size-3 text-slate-600" />
-                <span className="text-slate-700 font-medium">{messages.personalInfo.values.maritalStatus}</span>
+              <div className="flex items-center gap-1.5 px-2 py-1 bg-card rounded-md border border-border">
+                <HeartIcon className="size-3 text-muted-foreground" />
+                <span className="text-card-foreground font-medium">{messages.personalInfo.values.maritalStatus}</span>
               </div>
               
               {/* Language Switcher - Clickable Text */}
-              <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-50 rounded-md border border-slate-200">
-                <LanguagesIcon className="size-3 text-slate-600" />
+              <div className="flex items-center gap-1.5 px-2 py-1 bg-card rounded-md border border-border">
+                <LanguagesIcon className="size-3 text-muted-foreground" />
                 <div className="flex items-center gap-2">
                   {locales.map((lang, index) => (
                     <div key={lang} className="flex items-center gap-2">
                       <button
                         onClick={() => setLocale(lang)}
                         className={cn(
-                          "text-slate-700 font-medium text-xs hover:text-blue-600 transition-colors duration-200 cursor-pointer px-1 py-0.5 rounded",
-                          locale === lang && "text-blue-600 bg-blue-50 font-semibold"
+                          "text-card-foreground font-medium text-xs hover:text-accent transition-colors duration-200 cursor-pointer px-1 py-0.5 rounded",
+                          locale === lang && "text-accent bg-accent/10 font-semibold"
                         )}
                         title={`Switch to ${localeNamesTranslated[locale][lang]}`}
                       >
                         {localeNamesTranslated[locale][lang]}
                       </button>
                       {index < locales.length - 1 && (
-                        <span className="text-slate-400 text-xs">|</span>
+                        <span className="text-muted-foreground text-xs">|</span>
                       )}
                     </div>
                   ))}
@@ -109,7 +109,7 @@ export default function Page() {
             </div>
             
             <div className={cn(
-              "flex gap-x-2 pt-2 font-mono text-sm text-muted-foreground print:hidden justify-center md:justify-start",
+              "flex gap-x-2 pt-2 font-mono text-base md:text-lg text-muted-foreground print:hidden justify-center md:justify-start",
               isArabic && "md:justify-end"
             )}>
               {(() => {
@@ -120,7 +120,7 @@ export default function Page() {
                   contactButtons.push(
                     <Button
                       key="email"
-                      className="size-10 professional-hover hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700"
+                      className="size-10 professional-hover hover:bg-accent/10 hover:border-accent hover:text-accent"
                       variant="outline"
                       size="icon"
                       asChild
@@ -137,7 +137,7 @@ export default function Page() {
                   contactButtons.push(
                     <Button
                       key="phone"
-                      className="size-10 professional-hover hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700"
+                      className="size-10 professional-hover hover:bg-accent/10 hover:border-accent hover:text-accent"
                       variant="outline"
                       size="icon"
                       asChild
@@ -154,7 +154,7 @@ export default function Page() {
                   contactButtons.push(
                     <Button
                       key={social.name}
-                      className="size-10 professional-hover hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700"
+                      className="size-10 professional-hover hover:bg-accent/10 hover:border-accent hover:text-accent"
                       variant="outline"
                       size="icon"
                       asChild
@@ -186,7 +186,7 @@ export default function Page() {
 
           {/* Avatar Section - appears second on mobile, positioned based on language on desktop */}
           <Avatar className={cn(
-            "size-32 sm:size-36 md:size-40 lg:size-44 ring-4 ring-primary/20 ring-offset-2 animate-pulse-glow flex-shrink-0",
+            "size-44 sm:size-52 md:size-56 lg:size-64 xl:size-72 ring-4 ring-primary/20 ring-offset-2 animate-pulse-glow flex-shrink-0",
             isArabic ? "md:order-first" : "md:order-last"
           )}>
             <AvatarImage alt={messages.name} src={RESUME_DATA.avatarUrl} />
@@ -196,27 +196,20 @@ export default function Page() {
           </Avatar>
         </div>
 
-        <Section variant="siemens">
+        <Section variant="highlighted">
           <div className="classic-divider">
             <span>{messages.sections.workExperience}</span>
           </div>
           {Object.entries(messages.work).map(([key, work]) => {
-            const resumeWork = RESUME_DATA.work.find(w => w.company.toLowerCase().includes(key === 'siemens' ? 'siemens' : 'adorsys'));
-            const isSiemens = key === 'siemens';
+            const resumeWork = RESUME_DATA.work.find(w => w.company.toLowerCase().includes(key));
             return (
               <div 
                 key={key} 
-                className={cn(
-                  "mb-6 transition-all duration-300",
-                  isSiemens && "relative p-5 rounded-xl bg-gradient-to-r from-blue-50/80 via-slate-50/60 to-teal-50/80 border border-blue-200/40 shadow-sm hover:shadow-md hover:border-blue-300/60"
-                )}
+                className="mb-6 transition-all duration-300"
               >
-                {isSiemens && (
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400/5 via-teal-400/3 to-blue-400/5 pointer-events-none" />
-                )}
                 <div className="relative">
                   <div className={cn(
-                    "flex flex-col gap-y-2 text-base md:flex-row md:items-center md:justify-between md:gap-y-0",
+                    "flex flex-col gap-y-2 text-lg md:text-xl md:flex-row md:items-center md:justify-between md:gap-y-0",
                     isArabic ? "md:justify-between" : "md:justify-between"
                   )}>
                     <div className={cn(
@@ -225,16 +218,10 @@ export default function Page() {
                     )}>
                       <h3 className="font-bold leading-none">
                         <a 
-                          className={cn(
-                            "hover:underline transition-all duration-300 relative",
-                            isSiemens ? "text-slate-800 hover:text-blue-700 font-semibold" : "text-slate-800 hover:text-blue-600"
-                          )}
+                          className="hover:underline transition-all duration-300 relative text-accent hover:text-accent/80"
                           href={resumeWork?.link}
                         >
                           {resumeWork?.company}
-                          {isSiemens && (
-                            <span className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full shadow-sm" />
-                          )}
                         </a>
                       </h3>
 
@@ -254,8 +241,7 @@ export default function Page() {
                       </div>
                     </div>
                     <div className={cn(
-                      "text-sm tabular-nums font-medium self-start md:self-center",
-                      isSiemens ? "text-blue-700 font-semibold" : "text-black",
+                      "text-base md:text-lg tabular-nums font-medium self-start md:self-center text-foreground",
                       isArabic ? "md:order-1 text-right md:text-left" : "md:order-2 text-left"
                     )}>
                       {resumeWork?.start} - {resumeWork?.end ?? "Present"}
@@ -263,16 +249,14 @@ export default function Page() {
                   </div>
 
                   <h4 className={cn(
-                    "font-semibold text-base leading-none print:text-[12px] mt-1",
-                    isSiemens ? "text-slate-700 font-bold" : "text-slate-700",
+                    "font-semibold text-lg md:text-xl leading-none print:text-[12px] mt-1 text-foreground",
                     isArabic ? "text-right" : ""
                   )}>
                     {work.title}
                   </h4>
                 </div>
                 <div className={cn(
-                  "mt-3 text-sm print:text-[10px] leading-relaxed",
-                  isSiemens ? "text-slate-700" : "text-slate-600",
+                  "mt-3 text-base md:text-lg print:text-[10px] leading-relaxed text-foreground",
                   isArabic ? "text-right" : ""
                 )}>
                   {work.description}
@@ -287,37 +271,37 @@ export default function Page() {
           </div>
           {Object.entries(messages.education).map(([key, education]) => {
             const resumeEducation = RESUME_DATA.education.find(e => 
-              key === 'university' ? e.school.toLowerCase().includes('technische') : 
-              key === 'abitur' ? e.degree.toLowerCase().includes('abitur') : false
+              key === 'university' ? e.school.toLowerCase().includes('ulm') : 
+              key === 'bachelor' ? e.school.toLowerCase().includes('kalamoon') : false
             );
             return (
               <div key={key} className="mb-4">
                 <div>
                   <div className={cn(
-                    "flex items-center gap-x-2 text-base",
+                    "flex items-center gap-x-2 text-lg md:text-xl",
                     isArabic ? "justify-between" : "justify-between"
                   )}>
                     <h3 className={cn(
-                      "font-bold leading-none text-slate-800",
+                      "font-bold leading-none text-accent",
                       isArabic ? "order-2" : "order-1"
                     )}>
                       {education.school}
                     </h3>
                     <div className={cn(
-                      "text-sm tabular-nums text-black font-medium",
+                      "text-base md:text-lg tabular-nums text-foreground font-medium",
                       isArabic ? "order-1" : "order-2"
                     )}>
                       {resumeEducation?.start} - {resumeEducation?.end}
                     </div>
                   </div>
                 </div>
-                <div className={`mt-2 print:text-[12px] text-slate-600 font-medium ${
+                <div className={`mt-2 print:text-[12px] text-foreground font-medium text-base md:text-lg ${
                   isArabic ? 'text-right' : ''
                 }`}>
                   {education.degree}
                 </div>
                 {education.description && (
-                  <div className={`mt-1 print:text-[10px] text-slate-500 text-sm ${
+                  <div className={`mt-1 print:text-[10px] text-foreground text-base md:text-lg ${
                     isArabic ? 'text-right' : ''
                   }`}>
                     {education.description}
@@ -342,29 +326,29 @@ export default function Page() {
               <div key={key} className="mb-4">
                 <div>
                   <div className={cn(
-                    "flex items-center gap-x-2 text-base",
+                    "flex items-center gap-x-2 text-lg md:text-xl",
                     isArabic ? "justify-between" : "justify-between"
                   )}>
                     <h3 className={cn(
-                      "font-bold leading-none text-slate-800",
+                      "font-bold leading-none text-accent",
                       isArabic ? "order-2" : "order-1"
                     )}>
                       {recognition.title}
                     </h3>
                     <div className={cn(
-                      "text-sm tabular-nums text-black font-medium",
+                      "text-base md:text-lg tabular-nums text-foreground font-medium",
                       isArabic ? "order-1" : "order-2"
                     )}>
                       {resumeRecognition?.date}
                     </div>
                   </div>
-                  <div className={`mt-1 text-sm font-medium text-slate-600 ${
+                  <div className={`mt-1 text-base md:text-lg font-medium text-foreground ${
                     isArabic ? 'text-right' : ''
                   }`}>
                     {recognition.organization} • {recognition.type}
                   </div>
                 </div>
-                <div className={`mt-2 print:text-[12px] text-slate-600 text-sm ${
+                <div className={`mt-2 print:text-[12px] text-foreground text-base md:text-lg ${
                   isArabic ? 'text-right' : ''
                 }`}>
                   {recognition.description}
@@ -387,9 +371,9 @@ export default function Page() {
                   className="relative group"
                 >
                   {/* iPhone-like icon container with integrated label */}
-                  <div className="skill-icon-container relative w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105 border border-gray-100/50 overflow-hidden flex flex-col">
+                  <div className="skill-icon-container relative w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 bg-card rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105 border border-border overflow-hidden flex flex-col">
                     {/* Subtle gradient background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/30 to-gray-100/20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-card via-muted/30 to-muted/20"></div>
                     
                     {/* Icon image - positioned in upper portion */}
                     <div className="flex-1 relative">
@@ -403,8 +387,8 @@ export default function Page() {
                     </div>
                     
                     {/* Elegant label - positioned at bottom */}
-                    <div className="px-0.5 py-0.5 bg-gradient-to-t from-gray-50/90 to-transparent">
-                      <span className="text-[6px] sm:text-[7px] md:text-[8px] font-medium text-gray-700 text-center leading-none block truncate print:text-[5px]">
+                    <div className="px-0.5 py-0.5 bg-gradient-to-t from-muted/90 to-transparent">
+                      <span className="text-[6px] sm:text-[7px] md:text-[8px] font-medium text-card-foreground text-center leading-none block truncate print:text-[5px]">
                         {skill.name}
                       </span>
                     </div>
@@ -424,12 +408,12 @@ export default function Page() {
             <span>{messages.sections.interests}</span>
           </div>
           <ul className={cn(
-            "list-disc list-inside space-y-2 text-slate-700",
+            "list-disc list-inside space-y-2 text-foreground",
             isArabic && "list-outside text-right"
           )}>
             {messages.interestsList.map((interest, index) => (
               <li key={index} className={cn(
-                "text-sm leading-relaxed",
+                "text-base md:text-lg leading-relaxed text-foreground",
                 isArabic && "text-right"
               )}>
                 {interest}
@@ -445,10 +429,11 @@ export default function Page() {
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {Object.entries(messages.projects).length > 0 ? Object.entries(messages.projects).map(([key, project]) => {
               const resumeProject = RESUME_DATA.projects.find(p => 
-                key === 'iot' ? p.title.toLowerCase().includes('iot') :
-                key === 'financial' ? p.title.toLowerCase().includes('financial') :
-                key === 'dualStudy' ? p.title.toLowerCase().includes('dual') :
-                key === 'portfolio' ? p.title.toLowerCase().includes('portfolio') : false
+                key === 'manshoor' ? p.title.toLowerCase().includes('manshoor') :
+                key === 'klartax' ? p.title.toLowerCase().includes('klartax') :
+                key === 'uniulm' ? p.title.toLowerCase().includes('scientific') :
+                key === 'voip' ? p.title.toLowerCase().includes('voip') :
+                key === 'iot' ? p.title.toLowerCase().includes('iot') : false
               );
               return (
                 <ProjectCard
@@ -456,11 +441,11 @@ export default function Page() {
                   title={project.title}
                   description={project.description}
                   tags={resumeProject?.techStack || []}
-                  link={resumeProject && "link" in resumeProject ? resumeProject.link.href : undefined}
+                  link={resumeProject && "link" in resumeProject ? (resumeProject.link as any) : undefined}
                 />
               );
             }) : (
-              <div className="col-span-full text-center py-8 text-slate-500">
+              <div className="col-span-full text-center py-8 text-foreground">
                 <p className="text-lg font-medium">{messages.footer.comingSoon}</p>
                 <p className="text-sm">{messages.footer.focusingOn}</p>
               </div>
@@ -469,21 +454,21 @@ export default function Page() {
         </Section>
 
         {/* Professional Footer */}
-        <footer className="mt-12 pt-8 border-t border-slate-200 text-center print:hidden">
-          <div className="flex items-center justify-center gap-4 text-sm text-slate-500">
+        <footer className="mt-12 pt-8 border-t border-border text-center print:hidden">
+          <div className="flex items-center justify-center gap-4 text-sm text-foreground">
             <span>© 2025 {messages.name}</span>
             <span>•</span>
             <span>{messages.footer.builtWith}</span>
             <span>•</span>
             <a 
               href={RESUME_DATA.personalWebsiteUrl}
-              className="hover:text-blue-600 transition-colors duration-300"
+              className="hover:text-accent transition-colors duration-300"
               target="_blank"
             >
               {messages.footer.visitPortfolio}
             </a>
           </div>
-          <div className="mt-4 text-xs text-slate-400">
+          <div className="mt-4 text-xs text-muted-foreground">
             This CV is optimized for both digital viewing and printing • Press Ctrl+P to print
           </div>
         </footer>

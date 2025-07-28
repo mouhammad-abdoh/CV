@@ -67,19 +67,19 @@ const badgeVariants = cva(
       variant: {
         default:
           // Default badge: primary background with gradient, enhanced hover
-          "border-transparent bg-gradient-to-r from-blue-500 to-teal-500 text-white hover:from-blue-600 hover:to-teal-600 shadow-md",
+          "border-transparent bg-gradient-to-r from-secondary to-primary text-white hover:from-secondary/90 hover:to-primary/90 shadow-md",
         secondary:
           // Secondary badge: enhanced secondary styling with subtle gradient
-          "border-transparent bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 hover:from-slate-200 hover:to-gray-200 shadow-sm",
+          "border-transparent bg-gradient-to-r from-card to-secondary/20 text-card-foreground hover:from-card/90 hover:to-secondary/30 shadow-sm",
         destructive:
           // Destructive badge: enhanced destructive styling
-          "border-transparent bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600 shadow-md",
+          "border-transparent bg-gradient-to-r from-destructive to-destructive/80 text-white hover:from-destructive/90 hover:to-destructive/70 shadow-md",
         outline: 
           // Outline badge: enhanced outline with hover effects
-          "text-foreground border-slate-200 hover:bg-slate-50 hover:border-slate-300",
-        siemens:
-          // Special Siemens variant
-          "border-transparent bg-gradient-to-r from-teal-500 to-blue-500 text-white hover:from-teal-600 hover:to-blue-600 shadow-md animate-pulse-glow",
+          "text-foreground border-border hover:bg-card hover:border-border/80",
+        special:
+          // Special variant for highlighting
+          "border-transparent bg-gradient-to-r from-accent to-secondary text-white hover:from-accent/90 hover:to-secondary/90 shadow-md animate-pulse-glow",
       },
     },
     defaultVariants: {
@@ -108,7 +108,7 @@ const Badge: React.FC<BadgeProps> = ({ className, variant, src, tooltip, childre
 
       {/* Tooltip element */}
       {tooltip && (
-        <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 hidden group-hover:block bg-gray-800 text-white text-xs rounded-md py-1 px-2 z-10">
+        <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 hidden group-hover:block bg-primary text-foreground text-xs rounded-md py-1 px-2 z-10">
           {tooltip}
         </span>
       )}

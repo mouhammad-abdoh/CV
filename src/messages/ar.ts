@@ -1,9 +1,9 @@
 const arMessages = {
-  name: "سامي الزين",
-  initials: "س.ز",
-  location: "نورمبرغ، ألمانيا",
-  about: "مهندس برمجيات بروح الفريق والحزم وأسلوب عمل موجه نحو الحلول",
-  summary: "مهندس برمجيات مُخلص يتمتع بفهم رياضي قوي واستعداد مستمر للتعلم. أحمل روح الفريق والحزم والقدرة على التفكير والعمل بشكل مستقل. مثابرتي وانضباطي الذاتي يدفعانني لتقديم نتائج موجهة نحو الحلول في البيئات التقنية المتحدية.",
+  name: "محمد خير عبده",
+  initials: "م.خ.ع",
+  location: "أولم، ألمانيا",
+  about: "مهندس برمجيات بخبرة دولية في تقنية المعلومات، يجمع بين الدقة الألمانية وروح الابتكار",
+  summary: "مهندس برمجيات متمرس حاصل على درجة الماجستير في علوم الحاسوب مع أكثر من 10 سنوات من الخبرة المتنوعة في تقنية المعلومات. متخصص في تطوير التطبيقات الشاملة وخدمات الواجهة الخلفية وإدارة الأنظمة. خلفية قوية في Java و Spring Boot و Python والتقنيات الحديثة للويب. سجل حافل في بيئات الشركات الناشئة والحلول المؤسسية.",
   
   // Section headings
   sections: {
@@ -19,49 +19,79 @@ const arMessages = {
   
   // Work experience
   work: {
-    siemens: {
-      title: "مطور برمجيات البحث والتطوير",
-      description: "قيادة تطوير حلول برمجيات مبتكرة لأنظمة الأتمتة الصناعية. متخصص في تطوير الواجهة الخلفية Java/Spring Boot وتكامل الأنظمة وأنظمة Linux المدمجة. المساهمة في منصات إنترنت الأشياء من الجيل التالي وحلول المصانع الرقمية التي تعزز كفاءة التصنيع وموثوقيته."
+    ibtikar: {
+      title: "مطور برمجيات",
+      description: "تطوير شامل للواجهات الأمامية والخلفية باستخدام Java و Spring Boot وتطبيقات الهاتف المحمول باستخدام Flutter. بناء خطوط CI/CD في GitLab، الحاويات باستخدام Docker، النشر عبر Kubernetes، وإدارة المكونات مع Nexus."
     },
     adorsys: {
-      title: "مهندس برمجيات",
-      description: "مهندس برمجيات يعمل مع Java و Spring Boot و Spring Security و OAuth2 و Maven و Hibernate و JUnit5 و Mockito. خبرة مع Angular و Flutter و Jenkins و Docker و Helm و OpenShift. جزء من برنامج الدراسة المزدوجة بالتعاون مع الجامعة التقنية في نورمبرغ."
+      title: "مطور برمجيات",
+      description: "تطوير شامل مع التركيز على خدمات الواجهة الخلفية لمعالجة البيانات الضريبية في DATEV. تطوير نقاط REST وفقاً لمواصفات OpenAPI وتحسين أداء خطوط CI/CD الموجودة."
+    },
+    uniulm: {
+      title: "مهندس تقنية المعلومات",
+      description: "إدارة تقنية المعلومات وتطوير حلول برمجية للأجهزة العلمية. عزل الشبكة عبر VLAN، إعداد جدار الحماية PfSense، أدوات Python/Java لإدارة الأجهزة، الدعم التقني وتحليل الأمان."
+    },
+    pasifik: {
+      title: "مدير VoIP ومطور Python",
+      description: "تنفيذ وصيانة أنظمة VoIP (Sippy). التكامل مع FreeSwitch، تطوير REST API باستخدام Python/Django للتحكم الداخلي في النظام."
+    },
+    kancy: {
+      title: "مطور Java",
+      description: "تطوير نظام منزل ذكي معياري قائم على OSGi مع هياكل متعددة وواجهات REST."
     }
   },
   
   // Education
   education: {
     university: {
-      school: "الجامعة التقنية في نورمبرغ (Technische Hochschule Nürnberg)",
-      degree: "درجة البكالوريوس المزدوجة I.C.S. في علوم الحاسوب",
-      description: "بالتعاون مع adorsys GmbH & CO KG، الدرجة النهائية: 2.0"
+      school: "جامعة أولم",
+      degree: "ماجستير في العلوم المعرفية",
+      description: "دراسات عليا في العلوم المعرفية (غير مكتملة) - التركيز على فهم الإدراك البشري والذكاء الاصطناعي والنمذجة الحاسوبية"
     },
-    abitur: {
-      school: "مؤهل القبول الجامعي العام",
-      degree: "البكالوريا الألمانية (Abitur)",
-      description: "الدرجة النهائية: 1.5 (صادرة عن مكتب الاعتراف الألماني للتعليم الأجنبي)"
+    bachelor: {
+      school: "جامعة القلمون",
+      degree: "بكالوريوس الهندسة في علوم الحاسوب",
+      description: "برنامج شامل مدته 5 سنوات في علوم الحاسوب والهندسة، سوريا"
     }
   },
   
   // Recognitions
   recognitions: {
-    scholarship: {
-      title: "منحة ألمانيا (Deutschlandstipendium)",
-      organization: "الجامعة التقنية في نورمبرغ",
-      type: "منحة دراسية",
-      description: "منحة دراسية قائمة على الجدارة تُمنح للتميز الأكاديمي والإمكانات في علوم الحاسوب."
+    kubernetes: {
+      title: "دورة أساسيات Kubernetes و DevOps",
+      organization: "التطوير المهني",
+      type: "تدريب مهني",
+      description: "دورة تدريبية شاملة في تنسيق حاويات Kubernetes وأفضل ممارسات DevOps، تغطي استراتيجيات النشر والتوسع والمراقبة."
     },
-    sponsorship: {
-      title: "ترشيح برنامج الرعاية I.C.S.",
-      organization: "الجامعة التقنية في نورمبرغ",
-      type: "تقدير أكاديمي",
-      description: "تم ترشيحي واختياري لبرنامج الرعاية I.C.S. تقديراً للأداء الأكاديمي المتميز في برنامج الدراسة المزدوجة."
+    restapi: {
+      title: "شهادة تصميم RESTful API",
+      organization: "التطوير المهني",
+      type: "شهادة",
+      description: "شهادة متخصصة في مبادئ تصميم RESTful API وأفضل الممارسات."
     },
-    excellence: {
-      title: "أداء أكاديمي ممتاز",
-      organization: "مؤهل القبول الجامعي العام",
-      type: "إنجاز أكاديمي",
-      description: "حققت درجة نهائية 1.5 في مؤهل القبول الجامعي العام (Abitur)."
+    springboot: {
+      title: "معسكر Spring Boot",
+      organization: "التطوير المهني",
+      type: "تدريب مهني",
+      description: "برنامج تدريبي مكثف لتطوير إطار عمل Spring Boot."
+    },
+    rhel: {
+      title: "Red Hat Enterprise Linux Essentials",
+      organization: "Red Hat",
+      type: "شهادة",
+      description: "شهادة إدارة أنظمة RHEL والإدارة."
+    },
+    ccna: {
+      title: "CCNA - شهادة شركة سيسكو المعتمدة",
+      organization: "Cisco",
+      type: "شهادة",
+      description: "شهادة في البنية التحتية للشبكات والتوجيه/التبديل."
+    },
+    comptia: {
+      title: "CompTIA A+/Network+/Security+",
+      organization: "CompTIA",
+      type: "شهادة",
+      description: "شهادات شاملة في أساسيات تقنية المعلومات والشبكات والأمان."
     }
   },
   
@@ -71,13 +101,13 @@ const arMessages = {
       language: "العربية",
       proficiency: "لغة أم"
     },
-    german: {
-      language: "الألمانية",
-      proficiency: "طلاقة"
-    },
     english: {
       language: "الإنجليزية",
-      proficiency: "جيد جداً"
+      proficiency: "جيد جداً (C1)"
+    },
+    german: {
+      language: "الألمانية",
+      proficiency: "جيد (B1)"
     }
   },
   
@@ -88,47 +118,51 @@ const arMessages = {
     nationality: "الجنسية",
     maritalStatus: "الحالة الاجتماعية",
     values: {
-      dateOfBirth: "01 سبتمبر 1997",
-      placeOfBirth: "حمص",
-      nationality: "ألماني",
-      maritalStatus: "متزوج"
+      dateOfBirth: "17 يوليو 1992",
+      placeOfBirth: "سوريا",
+      nationality: "سوري",
+      maritalStatus: "أعزب"
     }
   },
   
   // Interests
   interestsList: [
-    "المشاركة الاجتماعية: دعم اللاجئين، الترجمة، دعم تعلم اللغة الألمانية",
-    "العمل التطوعي مع مودرا (منظمة استشارية)",
-    "الموسيقى الكلاسيكية: محب لشوبان وفيفالدي وبرامز",
-    "الأدب المهني: أندرو تانينباوم، وليام ستالينغز"
+    "نشرات تقنية المعلومات: Import AI بقلم Jack Clark، The Batch بقلم Andrew Ng، مناقشات Reddit",
+    "القراءة: المنطق، الرياضيات، علم النفس، العلوم المعرفية",
+    "بنية البرمجيات وتصميم الأنظمة",
+    "مساهمات المصدر المفتوح وابتكار التكنولوجيا"
   ],
   
   // Projects
   projects: {
+    manshoor: {
+      title: "منشور: منصة رقمنة المنشورات",
+      description: "تطوير شامل لخدمات الواجهة الخلفية باستخدام Java و Spring Boot وتطبيقات الهاتف المحمول باستخدام Flutter. بناء خطوط CI/CD في GitLab، تنفيذ الحاويات مع Docker، النشر عبر Kubernetes."
+    },
+    klartax: {
+      title: "كلارتاكس: رقمنة الإقرار الضريبي",
+      description: "تطوير شامل مع التركيز على خدمات الواجهة الخلفية لمعالجة البيانات الضريبية في DATEV. تطوير نقاط REST وفقاً لمواصفات OpenAPI وتحسين أداء خطوط CI/CD الموجودة."
+    },
+    uniulm: {
+      title: "نظام إدارة الأجهزة العلمية",
+      description: "إدارة تقنية المعلومات وتطوير البرمجيات للأجهزة العلمية في جامعة أولم. تنفيذ عزل الشبكة عبر VLAN، إعداد جدار الحماية PfSense، وتطوير أدوات Python/Java لإدارة الأجهزة."
+    },
+    voip: {
+      title: "منصة تكامل أنظمة VoIP",
+      description: "تنفيذ وصيانة أنظمة VoIP (Sippy) مع تكامل FreeSwitch. تطوير REST API باستخدام Python/Django للتحكم والإدارة الداخلية للنظام."
+    },
     iot: {
-      title: "منصة إنترنت الأشياء الصناعية",
-      description: "تطوير حلول شاملة لإنترنت الأشياء للأتمتة الصناعية في شركة سيمنز، مما يتيح المراقبة والتحكم في الوقت الفعلي لعمليات التصنيع."
-    },
-    financial: {
-      title: "حلول البرمجيات المالية",
-      description: "تطوير حلول برمجيات مالية قوية في adorsys باستخدام Java ونظام Spring Boot البيئي. التركيز على أنظمة الواجهة الخلفية الآمنة مع مصادقة OAuth2."
-    },
-    dualStudy: {
-      title: "مشروع الدراسة المزدوجة",
-      description: "مشروع هندسة برمجيات شامل تم إنجازه كجزء من برنامج الدراسة المزدوجة بالتعاون بين الجامعة التقنية في نورمبرغ و adorsys."
-    },
-    portfolio: {
-      title: "المحفظة الشخصية",
-      description: "موقع محفظة حديث يعرض عملي المهني ومهاراتي التقنية. تم بناؤه مع التركيز على الأداء وإمكانية الوصول."
+      title: "منصة أتمتة المنزل الذكي IoT",
+      description: "تطوير نظام منزل ذكي معياري قائم على OSGi مع هياكل متعددة وواجهات REST، مما يمكّن من قدرات أتمتة منزلية شاملة."
     }
   },
   
   // Footer
   footer: {
-    builtWith: "تم البناء باستخدام Next.js & Tailwind CSS",
-    visitPortfolio: "زيارة المحفظة",
-    comingSoon: "المشاريع قادمة قريباً...",
-    focusingOn: "التركيز حالياً على التطوير المهني في شركة سيمنز"
+    builtWith: "مبني باستخدام Next.js و Tailwind CSS",
+    visitPortfolio: "زيارة GitHub",
+    comingSoon: "المزيد من المشاريع قريباً...",
+    focusingOn: "يركز حالياً على هندسة البرمجيات وبنية الأنظمة"
   },
   
   // UI Elements
@@ -138,7 +172,7 @@ const arMessages = {
       professional: "مهني",
       academic: "أكاديمي",
       current: "حالي",
-      technologiesExpertise: "التقنيات والخبرات"
+      technologiesExpertise: "التقنيات والخبرة"
     }
   }
 };

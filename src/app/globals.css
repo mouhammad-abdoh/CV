@@ -6,43 +6,42 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 220 14% 20%;
+    --background: 206 40% 20%;       /* #1B3C53 in HSL - Deep navy blue */
+    --foreground: 210 20% 98%;       /* White text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 14% 20%;
+    --card: 206 30% 40%;             /* #456882 in HSL - Medium blue-grey */
+    --card-foreground: 210 20% 98%;  /* White text on cards */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 14% 20%;
+    --popover: 206 30% 40%;          /* Secondary color for popovers */
+    --popover-foreground: 210 20% 98%; /* White text on popovers */
 
-    --primary: 195 100% 42%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 206 40% 20%;          /* #1B3C53 in HSL - Primary brand color */
+    --primary-foreground: 210 20% 98%; /* White text on primary */
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 220 14% 20%;
+    --secondary: 206 30% 40%;        /* #456882 in HSL - Secondary brand color */
+    --secondary-foreground: 210 20% 98%; /* White text on secondary */
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 220 8% 46%;
+    --muted: 206 30% 40%;            /* Secondary color for muted elements */
+    --muted-foreground: 30 20% 80%;  /* #D2C1B6 in HSL - Accent color for muted text */
 
-    --accent: 195 100% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 30 20% 80%;            /* #D2C1B6 in HSL - Accent brand color */
+    --accent-foreground: 206 40% 20%; /* Primary text on accent */
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 195 100% 42%;
+    --border: 30 20% 80%;            /* Accent color for borders */
+    --input: 206 30% 40%;            /* Secondary color for inputs */
+    --ring: 30 20% 80%;
 
     --radius: 0.75rem;
 
-    /* Siemens Colors */
-    --siemens-teal: 214 100% 42%;
-    --siemens-teal-light: 214 100% 85%;
-    --siemens-teal-dark: 214 100% 35%;
-    --siemens-navy: 222 47% 11%;
-    --siemens-gray: 220 13% 91%;
-    --siemens-dark-gray: 220 8% 46%;
+    /* Personal Brand Colors */
+    --brand-primary: 206 40% 20%;     /* #1B3C53 - Deep Navy Blue in HSL */
+    --brand-secondary: 206 30% 40%;   /* #456882 - Slate Blue in HSL */
+    --brand-accent: 30 20% 80%;       /* #D2C1B6 - Warm Beige in HSL */
+    --brand-primary-dark: 206 50% 15%; /* Darker shade for hover states */
+    --brand-secondary-light: 206 25% 50%; /* Lighter shade for backgrounds */
 
     /* Classic Colors */
     --classic-gold: 43 96% 56%;
@@ -52,26 +51,26 @@
   }
 
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 20% 98%;
+    --background: 206 50% 15%;       /* Darker navy for dark mode */
+    --foreground: 210 20% 98%;       /* White text */
 
-    --card: 222 47% 11%;
-    --card-foreground: 210 20% 98%;
+    --card: 206 40% 20%;             /* Primary color for cards in dark mode */
+    --card-foreground: 210 20% 98%;  /* White text on cards */
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 206 40% 20%;          /* Primary color for popovers */
+    --popover-foreground: 210 20% 98%; /* White text on popovers */
 
-    --primary: 195 100% 42%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 206 30% 40%;          /* Secondary becomes primary in dark mode */
+    --primary-foreground: 210 20% 98%; /* White text on primary */
 
-    --secondary: 215 28% 17%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 206 40% 20%;        /* Primary becomes secondary in dark mode */
+    --secondary-foreground: 210 20% 98%; /* White text on secondary */
 
-    --muted: 215 28% 17%;
-    --muted-foreground: 218 11% 65%;
+    --muted: 206 40% 20%;            /* Primary color for muted elements */
+    --muted-foreground: 30 20% 80%;  /* Accent color for muted text */
 
-    --accent: 195 100% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 30 20% 80%;            /* Accent brand color */
+    --accent-foreground: 206 40% 20%; /* Primary text on accent */
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 20% 98%;
@@ -86,9 +85,14 @@
   * {
     @apply border-border;
   }
+  html {
+    background-color: hsl(var(--background)) !important;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    background-color: hsl(var(--background)) !important;
+    color: hsl(var(--foreground)) !important;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -145,31 +149,31 @@
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* Siemens-themed elements */
-.siemens-gradient {
-  background: linear-gradient(135deg, hsl(var(--siemens-teal)) 0%, hsl(var(--siemens-teal-dark)) 100%);
+/* Personal brand-themed elements */
+.brand-gradient {
+  background: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 100%);
 }
 
-.siemens-border {
-  border: 2px solid hsl(var(--siemens-teal));
+.brand-border {
+  border: 2px solid hsl(var(--brand-primary));
   position: relative;
 }
 
-.siemens-border::before {
+.brand-border::before {
   content: '';
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, hsl(var(--siemens-teal)), hsl(var(--siemens-teal-light)), hsl(var(--siemens-teal)));
+  background: linear-gradient(45deg, hsl(var(--brand-primary)), hsl(var(--brand-secondary)), hsl(var(--brand-accent)));
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.siemens-border:hover::before {
+.brand-border:hover::before {
   opacity: 0.3;
 }
 
@@ -188,14 +192,28 @@
   content: '';
   flex: 1;
   height: 1px;
-  background: hsl(var(--siemens-teal-light));
+  background: hsl(var(--brand-accent) / 0.6);
   margin: 0 1rem;
 }
 
 .classic-divider span {
-  color: hsl(var(--siemens-teal-dark));
+  color: hsl(var(--brand-accent));
   font-weight: 600;
+  font-size: 1.25rem;
   white-space: nowrap;
+}
+
+/* Responsive section headline sizing */
+@media (min-width: 640px) {
+  .classic-divider span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .classic-divider span {
+    font-size: 1.75rem;
+  }
 }
 
 /* Professional hover effects */
@@ -252,7 +270,7 @@
     background: white !important;
   }
   
-  .siemens-border::before {
+  .brand-border::before {
     display: none !important;
   }
   

@@ -16,7 +16,7 @@ interface Props {
 
 export function ProjectCard({ title, description, tags, link }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden border border-muted p-4 professional-hover bg-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl">
+    <Card className="flex flex-col overflow-hidden border border-muted p-4 professional-hover bg-card shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl">
       <CardHeader className="pb-3">
         <div className="space-y-2">
           <CardTitle className="text-lg font-bold">
@@ -24,19 +24,19 @@ export function ProjectCard({ title, description, tags, link }: Props) {
               <a
                 href={link}
                 target="_blank"
-                className="inline-flex items-center gap-2 hover:underline text-slate-800 hover:text-blue-600 transition-colors duration-300"
+                className="inline-flex items-center gap-2 hover:underline text-accent hover:text-accent/80 transition-colors duration-300"
               >
                 {title}{" "}
-                <span className="size-2 rounded-full bg-blue-500 animate-pulse"></span>
+                <span className="size-2 rounded-full bg-accent animate-pulse"></span>
               </a>
             ) : (
-              <span className="text-slate-800">{title}</span>
+              <span className="text-accent">{title}</span>
             )}
           </CardTitle>
-          <div className="hidden font-mono text-xs underline print:visible text-slate-500">
+          <div className="hidden font-mono text-xs underline print:visible text-muted-foreground">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <CardDescription className="font-medium text-sm print:text-[10px] text-slate-600 leading-relaxed">
+          <CardDescription className="font-medium text-sm print:text-[10px] text-foreground leading-relaxed">
             {description}
           </CardDescription>
         </div>

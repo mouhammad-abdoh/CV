@@ -1,9 +1,9 @@
 const deMessages = {
-  name: "Sami Alzein",
-  initials: "SA",
-  location: "Nürnberg, Deutschland",
-  about: "Software-Ingenieur mit Teamgeist, Durchsetzungsvermögen und lösungsorientierter Arbeitsweise",
-  summary: "Engagierter Software-Ingenieur mit ausgeprägtem mathematischen Verständnis und kontinuierlicher Lernbereitschaft. Ich bringe Teamgeist, Durchsetzungsvermögen und die Fähigkeit mit, eigenständig zu denken und zu arbeiten. Meine Ausdauer und Selbstdisziplin treiben mich an, lösungsorientierte Ergebnisse in anspruchsvollen technischen Umgebungen zu liefern.",
+  name: "Mouhammad Khier ABDOH",
+  initials: "MKA",
+  location: "Ulm, Deutschland",
+  about: "Software-Ingenieur mit internationaler IT-Erfahrung, der deutsche Präzision mit Innovationsgeist verbindet",
+  summary: "Erfahrener Software-Ingenieur mit Master-Abschluss in Informatik und über 10 Jahren vielfältiger IT-Erfahrung. Spezialisiert auf Full-Stack-Entwicklung, Backend-Services und Systemadministration. Starker Hintergrund in Java, Spring Boot, Python und modernen Webtechnologien. Bewährte Erfolgsbilanz sowohl in Startup-Umgebungen als auch bei Unternehmenslösungen.",
   
   // Section headings
   sections: {
@@ -19,49 +19,79 @@ const deMessages = {
   
   // Work experience
   work: {
-    siemens: {
-      title: "R&D Software-Entwickler",
-      description: "Leitung der Entwicklung innovativer Softwarelösungen für industrielle Automatisierungssysteme. Spezialisiert auf Java/Spring Boot Backend-Entwicklung, Systemintegration und eingebettete Linux-Systeme. Beitrag zu IoT-Plattformen der nächsten Generation und digitalen Fabrikslösungen, die die Produktionseffizienz und -zuverlässigkeit verbessern."
+    ibtikar: {
+      title: "Software-Entwickler",
+      description: "Full-Stack-Entwicklung mit Java & Spring Boot Backend-Services und Flutter Mobile-Anwendungen. Aufbau von CI/CD-Pipelines in GitLab, Containerisierung mit Docker, Deployment über Kubernetes und Artefakt-Management mit Nexus."
     },
     adorsys: {
-      title: "Software-Ingenieur",
-      description: "Software-Ingenieur mit Fokus auf Java, Spring Boot, Spring Security, OAuth2, Maven, Hibernate, JUnit5 und Mockito. Erfahrung mit Angular, Flutter, Jenkins, Docker, Helm und OpenShift. Teil des dualen Studienprogramms in Kooperation mit der Technischen Hochschule Nürnberg."
+      title: "Software-Entwickler",
+      description: "Full-Stack-Entwicklung mit Fokus auf Backend-Services für die Verarbeitung von Steuerdaten bei DATEV. Entwicklung von REST-Endpunkten nach OpenAPI-Spezifikationen und Leistungsoptimierung bestehender CI/CD-Pipelines."
+    },
+    uniulm: {
+      title: "IT-Ingenieur",
+      description: "IT-Administration und Entwicklung von Softwarelösungen für wissenschaftliche Geräte. Netzwerk-Isolation über VLAN, PfSense-Firewall-Setup, Python/Java-Tools für Gerätemanagement, technischer Support und Sicherheitsanalyse."
+    },
+    pasifik: {
+      title: "VoIP-Admin & Python-Entwickler",
+      description: "Implementierung und Wartung von VoIP-Systemen (Sippy). Integration mit FreeSwitch, Entwicklung von RESTful API mit Python/Django für interne Systemsteuerung."
+    },
+    kancy: {
+      title: "Java-Entwickler",
+      description: "Entwicklung eines modularen OSGi-basierten Smart-Home-Systems mit mehreren Architekturen und REST-Schnittstellen."
     }
   },
   
   // Education
   education: {
     university: {
-      school: "Technische Hochschule Nürnberg",
-      degree: "Dualer I.C.S. Bachelor-Abschluss in Informatik",
-      description: "In Kooperation mit adorsys GmbH & CO KG, Abschlussnote: 2,0"
+      school: "Universität Ulm",
+      degree: "Master of Science in Informatik",
+      description: "Schwerpunkt auf Softwareentwicklung, Algorithmen und Datenstrukturen"
     },
-    abitur: {
-      school: "Allgemeine Hochschulreife",
-      degree: "Abitur",
-      description: "Abschlussnote: 1,0"
+    bachelor: {
+      school: "Universität Damaskus",
+      degree: "Bachelor of Science in Informatik",
+      description: "Grundlagen der Informatik und Mathematik"
     }
   },
   
   // Recognitions
   recognitions: {
-    scholarship: {
-      title: "Deutschlandstipendium",
-      organization: "Technische Hochschule Nürnberg",
-      type: "Stipendium",
-      description: "Leistungsbasiertes Stipendium für akademische Exzellenz und Potenzial in der Informatik."
+    kubernetes: {
+      title: "Kubernetes & DevOps Grundlagen Kurs",
+      organization: "Berufliche Weiterbildung",
+      type: "Professionelle Schulung",
+      description: "Umfassender Schulungskurs in Kubernetes Container-Orchestrierung und DevOps Best Practices, einschließlich Deployment-Strategien, Skalierung und Monitoring."
     },
-    sponsorship: {
-      title: "I.C.S. Förderprogramm Nominierung",
-      organization: "Technische Hochschule Nürnberg",
-      type: "Akademische Auszeichnung",
-      description: "Nominiert und ausgewählt für das I.C.S. Förderprogramm in Anerkennung herausragender akademischer Leistungen im dualen Studium."
+    restapi: {
+      title: "RESTful API Design Zertifizierung",
+      organization: "Berufliche Weiterbildung",
+      type: "Zertifizierung",
+      description: "Spezialisierte Zertifizierung in RESTful API Design-Prinzipien und Best Practices."
     },
-    excellence: {
-      title: "Ausgezeichnete akademische Leistung",
-      organization: "Allgemeine Hochschulreife",
-      type: "Akademische Leistung",
-      description: "Abschlussnote 1,0 in der Allgemeinen Hochschulreife (Abitur) erreicht."
+    springboot: {
+      title: "Spring Boot Camp",
+      organization: "Berufliche Weiterbildung",
+      type: "Professionelle Schulung",
+      description: "Intensives Schulungsprogramm für Spring Boot Framework-Entwicklung."
+    },
+    rhel: {
+      title: "Red Hat Enterprise Linux Essentials",
+      organization: "Red Hat",
+      type: "Zertifizierung",
+      description: "RHEL Systemadministration und Management-Zertifizierung."
+    },
+    ccna: {
+      title: "CCNA - Cisco Certified Network Associate",
+      organization: "Cisco",
+      type: "Zertifizierung",
+      description: "Netzwerkinfrastruktur und Routing/Switching-Zertifizierung."
+    },
+    comptia: {
+      title: "CompTIA A+/Network+/Security+",
+      organization: "CompTIA",
+      type: "Zertifizierung",
+      description: "Umfassende IT-Grundlagen, Netzwerk- und Sicherheits-Zertifizierungen."
     }
   },
   
@@ -88,8 +118,8 @@ const deMessages = {
     nationality: "Staatsangehörigkeit",
     maritalStatus: "Familienstand",
     values: {
-      dateOfBirth: "01. September 1997",
-      placeOfBirth: "Homs",
+      dateOfBirth: "15. Mai 1987",
+      placeOfBirth: "Damaskus",
       nationality: "Deutsch",
       maritalStatus: "Verheiratet"
     }
@@ -97,29 +127,33 @@ const deMessages = {
   
   // Interests
   interestsList: [
-    "Soziales Engagement: Unterstützung für Flüchtlinge, Übersetzungen, Deutschsprachhilfe",
-    "Ehrenamtliche Arbeit bei Mudra (Beratungsorganisation)",
-    "Klassische Musik: Liebhaber von Chopin, Vivaldi, Brahms",
-    "Fachliteratur: Andrew Tannenbaum, William Stallings"
+    "Open-Source-Entwicklung: Beiträge zu Community-Projekten und Innovation",
+    "Technische Literatur: Kontinuierliches Lernen über neue Frameworks und Methodologien",
+    "DevOps & Cloud: Erkundung modernster Deployment- und Skalierungsstrategien",
+    "Mentoring: Führung von Junior-Entwicklern und Wissensaustausch in der Tech-Community"
   ],
   
   // Projects
   projects: {
+    manshoor: {
+      title: "Manshoor: Publikations-Digitalisierungsplattform",
+      description: "Full-Stack-Entwicklung von Backend-Services mit Java & Spring Boot und mobilen Anwendungen mit Flutter. Aufbau von CI/CD-Pipelines in GitLab, Containerisierung mit Docker, Deployment über Kubernetes."
+    },
+    klartax: {
+      title: "Klartax: Steuererklärung-Digitalisierung",
+      description: "Full-Stack-Entwicklung mit Fokus auf Backend-Services für Steuerdatenverarbeitung bei DATEV. Entwicklung von REST-Endpunkten nach OpenAPI-Spezifikationen und Leistungsoptimierung bestehender CI/CD-Pipelines."
+    },
+    uniulm: {
+      title: "Wissenschaftliches Geräte-Management-System",
+      description: "IT-Administration und Softwareentwicklung für wissenschaftliche Geräte an der Universität Ulm. Netzwerk-Isolation über VLAN, PfSense-Firewall-Setup und Python/Java-Tools für Gerätemanagement implementiert."
+    },
+    voip: {
+      title: "VoIP-Systemintegrations-Plattform",
+      description: "Implementierung und Wartung von VoIP-Systemen (Sippy) mit FreeSwitch-Integration. RESTful API mit Python/Django für interne Systemsteuerung und -verwaltung entwickelt."
+    },
     iot: {
-      title: "Industrielle IoT-Plattform",
-      description: "Entwicklung umfassender IoT-Lösungen für industrielle Automatisierung bei Siemens, die Echtzeitüberwachung und -steuerung von Fertigungsprozessen ermöglichen."
-    },
-    financial: {
-      title: "Finanz-Software-Lösungen",
-      description: "Entwicklung robuster Finanz-Software-Lösungen bei adorsys mit Java und Spring Boot Ökosystem. Fokus auf sichere Backend-Systeme mit OAuth2-Authentifizierung."
-    },
-    dualStudy: {
-      title: "Duales Studienprojekt",
-      description: "Umfassendes Software-Engineering-Projekt als Teil des dualen Studienprogramms in Kooperation zwischen der Technischen Hochschule Nürnberg und adorsys."
-    },
-    portfolio: {
-      title: "Persönliches Portfolio",
-      description: "Moderne Portfolio-Website zur Präsentation meiner beruflichen Arbeit und technischen Fähigkeiten. Mit Fokus auf Performance und Barrierefreiheit entwickelt."
+      title: "IoT-Hausautomatisierungsplattform",
+      description: "Entwicklung eines modularen OSGi-basierten Smart-Home-Systems mit mehreren Architekturen und REST-Schnittstellen für umfassende Hausautomatisierungsmöglichkeiten."
     }
   },
   
@@ -128,7 +162,7 @@ const deMessages = {
     builtWith: "Erstellt mit Next.js & Tailwind CSS",
     visitPortfolio: "Portfolio besuchen",
     comingSoon: "Projekte folgen bald...",
-    focusingOn: "Derzeit konzentriert auf berufliche Entwicklung bei Siemens"
+    focusingOn: "Derzeit konzentriert auf innovative Softwarelösungen und DevOps-Exzellenz"
   },
   
   // UI Elements

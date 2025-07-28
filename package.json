@@ -1,8 +1,10 @@
 {
-  "name": "my-resume",
-  "version": "0.1.0",
+  "name": "mouhammad-cv",
+  "version": "1.0.0",
   "type": "module",
   "private": true,
+  "author": "Mouhammad Khier ABDOH",
+  "description": "Personal CV website built with Next.js and Tailwind CSS",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
